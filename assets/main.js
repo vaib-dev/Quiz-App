@@ -13,8 +13,6 @@ async function getQuestions() {
     }
 }
 
-
-
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -142,9 +140,9 @@ function optionSelected(answer, questions) {
 function progressLine(questions) {
     const progress_percent = ((que_count + 1) / questions.length)*10;
     progress_line.style.width = progress_percent + "%";
-  }
+  }  
 function showResult(questions) {
-    info_box.classList.remove("activeInfo"); //hide info box
+  info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
